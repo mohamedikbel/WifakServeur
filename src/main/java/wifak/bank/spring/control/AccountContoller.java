@@ -53,5 +53,16 @@ public class AccountContoller {
 		return aser.getallaccounts();
 
 	}
+	
+        @GetMapping("/get-content")
+	@ResponseBody
+	public ArrayList<String> retrievecontnet() {
+
+		File f = new File("./src/main/resources");
+		ArrayList<String> names = new ArrayList<String>(Arrays.asList(f.list()));
+		
+		return names;
+
+	}
 
 }
