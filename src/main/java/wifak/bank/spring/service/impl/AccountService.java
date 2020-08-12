@@ -32,7 +32,7 @@ public class AccountService implements AccountServiceRemote {
 
 
 	private FTPClient ftp;
-	String directory = "src/main/resources/";
+	String directory = "./src/main/resources/";
 
 	public static String compconf;
 
