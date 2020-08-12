@@ -80,3 +80,135 @@
 2020-08-12 10:03:57.608  INFO 5056 --- [async-channel-group-0-handler-executor] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:297101}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
 2020-08-12 10:03:58.613  INFO 5056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
 2020-08-12 10:03:58.616  INFO 5056 --- [main] w.b.spring.WifakServeurBankApplication   : Started WifakServeurBankApplication in 44.1 seconds (JVM running for 46.541)
+2020-08-12 09:42:58.560  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:250) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$SelectorMonitor$1.run(TlsChannelStreamFactoryFactory.java:145) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_144]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_144]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:222) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 2 common frames omitted
+
+2020-08-12 09:42:58.560  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:250) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$SelectorMonitor$1.run(TlsChannelStreamFactoryFactory.java:145) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_144]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_144]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:222) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 2 common frames omitted
+
+2020-08-12 09:42:58.560  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:250) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$SelectorMonitor$1.run(TlsChannelStreamFactoryFactory.java:145) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_144]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_144]
+	at com.mongodb.connection.TlsChannelStreamFactoryFactory$TlsChannelStream$1.run(TlsChannelStreamFactoryFactory.java:222) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 2 common frames omitted
+
+2020-08-12 09:43:07.434  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:131) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_144]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_144]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_144]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_144]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_144]
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673) ~[na:1.8.0_144]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 3 common frames omitted
+
+2020-08-12 09:43:07.434  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:131) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_144]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_144]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_144]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_144]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_144]
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673) ~[na:1.8.0_144]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 3 common frames omitted
+
+2020-08-12 09:43:07.435  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:131) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_144]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_144]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_144]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_144]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_144]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_144]
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673) ~[na:1.8.0_144]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 3 common frames omitted
+
+2020-08-12 09:49:56.373  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:99, serverValue:265213}] to cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:56.420  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:100, serverValue:305016}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:56.431  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:101, serverValue:269545}] to cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:56.595  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=220482895, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=null, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13426721253789}
+2020-08-12 09:49:56.612  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=190910859, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=7fffffff0000000000000004, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13426737858932}
+2020-08-12 09:49:56.613  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:56.623  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=191465530, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=null, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13426749761267}
+2020-08-12 09:49:57.326  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:104, serverValue:305016}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:57.338  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:102, serverValue:265213}] to cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:57.389  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:103, serverValue:269545}] to cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:57.543  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=216916020, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=7fffffff0000000000000004, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13427669780879}
+2020-08-12 09:49:57.544  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 09:49:57.551  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=211065617, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=null, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13427676938887}
+2020-08-12 09:49:57.580  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=190262421, setName='atlas-ev2i6u-shard-0', canonicalAddress=cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, hosts=[cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017, cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='CENTRAL_US'}]}, electionId=null, setVersion=1, lastWriteDate=Wed Aug 12 12:44:43 CEST 2020, lastUpdateTimeNanos=13427706726913}
+2020-08-12 13:01:04.053  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:105, serverValue:305016}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:01:06.637  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:107, serverValue:305016}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:01:06.732  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:106, serverValue:269545}] to cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:01:06.743  INFO 5056 --- [cluster-ClusterId{value='5f33a259ca30c1343f94c0c7', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:109, serverValue:265213}] to cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:01:06.756  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:110, serverValue:269545}] to cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:01:06.769  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:108, serverValue:265213}] to cluster0-shard-00-01.z10pa.gcp.mongodb.net:27017
+2020-08-12 13:44:42.253  INFO 5056 --- [cluster-ClusterId{value='5f33a268ca30c1343f94c0c8', description='null'}-cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:111, serverValue:269545}] to cluster0-shard-00-00.z10pa.gcp.mongodb.net:27017
+2020-08-12 14:39:25.886  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-08-12 14:39:25.947  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:8, serverValue:297101}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017 because there was a socket exception raised on another connection from this pool.
+2020-08-12 14:39:27.876  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:112, serverValue:305779}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 14:39:28.066  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:112, serverValue:305779}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017 because the pool has been closed.
+2020-08-12 14:39:28.070  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-12 14:39:28.089  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:295421}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017 because there was a socket exception raised on another connection from this pool.
+2020-08-12 14:39:29.651  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:113, serverValue:305779}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017
+2020-08-12 14:39:29.852  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:113, serverValue:305779}] to cluster0-shard-00-02.z10pa.gcp.mongodb.net:27017 because the pool has been closed.
+2020-08-12 14:39:30.299  INFO 5056 --- [RMI TCP Connection(247)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]

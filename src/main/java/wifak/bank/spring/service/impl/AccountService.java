@@ -30,6 +30,7 @@ public class AccountService implements AccountServiceRemote {
 	AccountRepository accRepo;
 
 	private FTPClient ftp;
+	String directory = "src/main/resources/ftp/";
 
 	public static String compconf;
 
@@ -206,11 +207,11 @@ public class AccountService implements AccountServiceRemote {
 				this.setCompconf(numberOnly);
 
 				System.out.println(name);
-				FileOutputStream out = new FileOutputStream("c:/testftp/" + name);
+				FileOutputStream out = new FileOutputStream(directory + name);
 
 				ftp.retrieveFile(name, out);
 
-				return "c:/testftp/" + name;
+				return directory + name;
 
 			}
 
