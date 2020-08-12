@@ -28,9 +28,11 @@ public class AccountService implements AccountServiceRemote {
 
 	@Autowired
 	AccountRepository accRepo;
+	
+
 
 	private FTPClient ftp;
-	String directory = "src/main/resources/ftp/";
+	String directory = "src/main/resources/";
 
 	public static String compconf;
 
