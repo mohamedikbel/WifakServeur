@@ -1,7 +1,10 @@
 package wifak.bank.spring.control;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.SocketException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import wifak.bank.spring.entities.Account;
 import wifak.bank.spring.entities.Ftp;
 import wifak.bank.spring.service.impl.AccountService;
+
 
 @RestController
 @RequestMapping("/api/account")
@@ -51,6 +55,17 @@ public class AccountContoller {
 	public List<Account> retrieveTransactions() {
 
 		return aser.getallaccounts();
+
+	}
+	
+        @GetMapping("/get-content")
+	@ResponseBody
+	public ArrayList<String> retrievecontnet() {
+
+		File f = new File("./src/main/resources");
+		ArrayList<String> names = new ArrayList<String>(Arrays.asList(f.list()));
+		
+		return names;
 
 	}
 

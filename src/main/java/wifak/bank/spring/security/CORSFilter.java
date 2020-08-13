@@ -26,7 +26,7 @@ public class CORSFilter implements Filter {
 			throws IOException, ServletException {
 		HttpServletResponse response = (HttpServletResponse) resp;
 		HttpServletRequest request = (HttpServletRequest) req;
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+		response.setHeader("Access-Control-Allow-Origin", "https://wifak-app.herokuapp.com");
 		response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Credentials", "true");
