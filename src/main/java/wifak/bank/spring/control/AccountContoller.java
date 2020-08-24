@@ -21,14 +21,14 @@ import wifak.bank.spring.service.impl.AccountService;
 
 
 @RestController
-@RequestMapping("/api/account")
+@RequestMapping("/api")
 @CrossOrigin
 public class AccountContoller {
 
 	@Autowired
 	AccountService aser;
 
-	@PostMapping("/loaddata")
+	@PostMapping("/transactions")
 	public Boolean add(@ModelAttribute Ftp f) throws SocketException, IOException {
 
 		String path = aser.downloadComp(f);
@@ -42,7 +42,7 @@ public class AccountContoller {
 
 	}
 
-	@GetMapping("/retrieve-transaction/{Authorizationcode}")
+	@GetMapping("/transactions/{Authorizationcode}")
 	@ResponseBody
 	public List<Account> retrieveTransaction(@PathVariable("Authorizationcode") String code) {
 
@@ -50,7 +50,7 @@ public class AccountContoller {
 
 	}
 
-	@GetMapping("/retrieve-transactions")
+	@GetMapping("/transactions")
 	@ResponseBody
 	public List<Account> retrieveTransactions() {
 
@@ -58,15 +58,6 @@ public class AccountContoller {
 
 	}
 	
-        @GetMapping("/get-content")
-	@ResponseBody
-	public ArrayList<String> retrievecontnet() {
-
-		File f = new File("./src/main/resources");
-		ArrayList<String> names = new ArrayList<String>(Arrays.asList(f.list()));
-		
-		return names;
-
-	}
+    
 
 }
